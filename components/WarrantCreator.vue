@@ -344,7 +344,7 @@ export default {
       error: '',
       canaryIsNew: true,
       fetchHashError: false,
-      fileName: `canary-${new Date()}.json`,
+      fileName: `canary_${Math.round(Date.now() / 1000)}.json`,
     }
   },
   computed: {
