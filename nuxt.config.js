@@ -12,16 +12,13 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' }
+      { hid: 'description', name: 'description', content: '' },
     ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
-  css: [
-  ],
+  css: [],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: ['~/plugins/vue-notification.js', '~/plugins/json-editor.js'],
@@ -53,25 +50,24 @@ export default {
       dark: true,
       themes: {
         dark: {
-          primary: "#56347c",
-          accent: "#f2f25c",
-          secondary: "#f2f25c",
-          info: "#ccccec",
-          warning: "#c2a629",
-          error: "#e82626",
-          success: "#81b03b",
-        }
-      }
-    }
+          primary: '#56347c',
+          accent: '#f2f25c',
+          secondary: '#f2f25c',
+          info: '#ccccec',
+          warning: '#c2a629',
+          error: '#e82626',
+          success: '#81b03b',
+        },
+      },
+    },
   },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
-  build: {
-  },
+  build: {},
   generate: {
     dir: 'docs',
   },
   router: {
-    base: '/warrant-canary-incubator/'
-  }
+    base: '/webapp/',
+  },
 }

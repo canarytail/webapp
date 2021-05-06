@@ -25,7 +25,7 @@ export default {
   },
   data() {
     return {
-      repoUrl: 'https://github.com/vesamet/warrant-canary-incubator',
+      repoUrl: 'https://github.com/vesamet',
       cliUrl: 'https://github.com/canarytail/client',
     }
   },

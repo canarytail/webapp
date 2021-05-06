@@ -244,7 +244,7 @@
               <p>
                 Warrant canary successfully signed!<br />
                 You may
-                <a :href="encodedCanary" download="canary.json">
+                <a :href="encodedCanary" :download="fileName">
                   <v-btn class="d-inline-block" color="primary" x-small>
                     download
                   </v-btn>
@@ -275,7 +275,7 @@
                 </v-btn>
               </v-col>
               <v-col class="text-right">
-                <a :href="encodedCanary" download="canary.json">
+                <a :href="encodedCanary" :download="fileName">
                   <v-btn color="primary">Download as file</v-btn>
                 </a>
               </v-col>
@@ -344,6 +344,7 @@ export default {
       error: '',
       canaryIsNew: true,
       fetchHashError: false,
+      fileName: `canary-${new Date()}.json`,
     }
   },
   computed: {
@@ -369,8 +370,7 @@ export default {
           publicKeys = this.signKeys.map((k) => k.public)
         }
         // Define canary
-        let canary = {
-        }
+        let canary = {}
         //Defin claims
         let claims = {}
         claims.domain = this.domain.toLowerCase()
